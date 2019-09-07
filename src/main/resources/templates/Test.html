@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="../static/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+	function getQYXX(){
+		var url ="/index";
+		$.ajax({
+			type:'GET',
+			url:url,
+			success:function(data){
+				console.log(data);
+			}
+		})
+	}
+
+</script>
+<body>
+<div>
+<button onclick="getQYXX();">查询企业信息</button>
+</div>
+<div id="qyxx">
+	<table>
+	<thead>
+		<tr>
+			<td>名称</td>
+			<td>地址</td>
+		</tr>
+	</thead>
+	<tbody id="body">
+	
+	</tbody>
+	</table>
+</div>
+</body>
+</html>
